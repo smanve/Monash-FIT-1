@@ -1,0 +1,240 @@
+proxyid,Sex,age,hgt,wgt,bmi,bmi_WHO,smoke,totchol
+1,male,29,171,64,21.889999,< 25 normal,curr >20,4.5999999
+5,male,25,171,85,29.07,25-29 overwgt,non-smoker,7.4000001
+6,male,28,175,73,23.84,< 25 normal,non-smoker,5.1999998
+7,male,55,184,79,23.33,< 25 normal,ex-smoker,6.3000002
+8,male,50,185,118,34.48,30+ obese,ex-smoker,7.1999998
+10,male,59,180,84,25.93,25-29 overwgt,non-smoker,6
+11,male,51,186,80,23.120001,< 25 normal,non-smoker,7
+13,female,52,163,55,20.700001,< 25 normal,non-smoker,7.5999999
+14,male,28,177,69,22.02,< 25 normal,non-smoker,5.4000001
+15,female,57,165,94,34.529999,30+ obese,ex-smoker,5.5999999
+16,male,53,177,96,30.639999,30+ obese,non-smoker,5.8000002
+17,female,29,161,75,28.93,25-29 overwgt,non-smoker,5.9000001
+18,male,55,181,87,26.559999,25-29 overwgt,non-smoker,5.0999999
+19,female,55,155,67,27.889999,25-29 overwgt,ex-smoker,6.8000002
+22,male,24,156,78,32.049999,30+ obese,non-smoker,6.6999998
+23,male,31,172,65,21.969999,< 25 normal,ex-smoker,3.5999999
+24,female,20,160,67,26.17,25-29 overwgt,non-smoker,5.5999999
+26,female,21,160,56,21.879999,< 25 normal,curr <=20,4.4000001
+27,male,28,173,89,29.74,25-29 overwgt,curr <=20,6.1999998
+28,female,19,158,51,20.43,< 25 normal,non-smoker,4.1999998
+29,female,52,157,60,24.34,< 25 normal,non-smoker,5.5
+30,male,48,181,84,25.639999,25-29 overwgt,ex-smoker,4
+32,female,23,159,50,19.780001,< 25 normal,non-smoker,3.9000001
+35,male,29,174,87,28.74,25-29 overwgt,curr >20,7.0999999
+36,male,68,172,78,26.370001,25-29 overwgt,non-smoker,6.6999998
+38,female,27,152,55,23.809999,< 25 normal,ex-smoker,4.1999998
+40,male,61,171,83,28.379999,25-29 overwgt,non-smoker,5.1999998
+42,male,49,162,60,22.860001,< 25 normal,non-smoker,8.1999998
+43,male,60,173,91,30.41,30+ obese,ex-smoker,5.5999999
+44,female,55,167,83,29.76,25-29 overwgt,non-smoker,5.5999999
+45,female,25,168,51,18.07,< 25 normal,non-smoker,5.0999999
+46,female,20,167,78,27.969999,25-29 overwgt,non-smoker,4.1999998
+47,male,57,180,94,29.01,25-29 overwgt,ex-smoker,5.4000001
+48,female,47,157,58,23.530001,< 25 normal,non-smoker,4.9000001
+49,male,31,179,56,17.48,< 25 normal,non-smoker,4.3000002
+51,male,29,176,62,20.02,< 25 normal,curr <=20,5
+52,male,46,180,99,30.559999,30+ obese,ex-smoker,4.9000001
+53,male,69,176,82,26.469999,25-29 overwgt,ex-smoker,6.3000002
+55,male,23,188,88,24.9,< 25 normal,non-smoker,4.1999998
+56,male,24,177,80,25.540001,25-29 overwgt,non-smoker,5.5
+57,female,48,160,72,28.120001,25-29 overwgt,non-smoker,5.0999999
+58,male,52,178,91,28.719999,25-29 overwgt,non-smoker,6.1999998
+60,male,57,178,84,26.51,25-29 overwgt,ex-smoker,7.4000001
+61,male,21,176,69,22.280001,< 25 normal,non-smoker,4.5999999
+62,male,65,165,61,22.41,< 25 normal,non-smoker,5.0999999
+63,male,56,176,92,29.700001,25-29 overwgt,ex-smoker,6.1999998
+66,male,62,173,72,24.059999,< 25 normal,ex-smoker,6
+67,female,56,165,68,24.98,< 25 normal,non-smoker,5
+68,male,25,181,68,20.76,< 25 normal,non-smoker,4.4000001
+69,female,58,172,67,22.65,< 25 normal,non-smoker,5.5
+70,female,29,155,48,19.98,< 25 normal,non-smoker,3.5999999
+71,female,30,166,51,18.51,< 25 normal,non-smoker,5.1999998
+72,male,55,181,95,29,25-29 overwgt,ex-smoker,7.8000002
+73,male,66,168,70,24.799999,< 25 normal,ex-smoker,4.5999999
+74,male,44,181,84,25.639999,25-29 overwgt,non-smoker,6.9000001
+75,female,30,170,63,21.799999,< 25 normal,non-smoker,5.6999998
+76,female,59,159,61,24.129999,< 25 normal,non-smoker,6.4000001
+77,male,61,180,77,23.77,< 25 normal,ex-smoker,5.1999998
+79,female,50,159,47,18.59,< 25 normal,non-smoker,5.5
+81,female,19,164,53,19.709999,< 25 normal,curr <=20,4.1999998
+82,female,29,165,67,24.610001,< 25 normal,ex-smoker,4.9000001
+83,male,64,175,85,27.76,25-29 overwgt,non-smoker,6
+84,female,56,159,56,22.15,< 25 normal,non-smoker,5.4000001
+85,female,56,158,64,25.639999,25-29 overwgt,non-smoker,5.8000002
+86,male,19,175,62,20.24,< 25 normal,non-smoker,3.5
+87,male,52,174,75,24.77,< 25 normal,ex-smoker,5.4000001
+88,male,47,173,108,36.09,30+ obese,curr >20,5.3000002
+90,female,23,157,48,19.469999,< 25 normal,ex-smoker,5.0999999
+91,female,57,161,62,23.92,< 25 normal,non-smoker,5.8000002
+93,male,27,175,80,26.120001,25-29 overwgt,ex-smoker,5.0999999
+94,male,22,181,78,23.809999,< 25 normal,non-smoker,4
+95,female,56,161,55,21.219999,< 25 normal,ex-smoker,5.1999998
+96,male,48,173,76,25.389999,25-29 overwgt,non-smoker,7.0999999
+97,male,19,176,59,19.049999,< 25 normal,non-smoker,2.4000001
+98,female,53,160,63,24.610001,< 25 normal,non-smoker,5.6999998
+99,male,50,177,94,30,30+ obese,non-smoker,6
+100,female,20,168,55,19.49,< 25 normal,non-smoker,4.3000002
+101,female,51,161,62,23.92,< 25 normal,non-smoker,6.3000002
+103,female,26,163,51,19.200001,< 25 normal,non-smoker,5.0999999
+104,female,51,153,78,33.32,30+ obese,non-smoker,6
+107,female,27,160,55,21.48,< 25 normal,ex-smoker,5.8000002
+108,female,63,167,55,19.719999,< 25 normal,non-smoker,6.1999998
+109,female,54,158,56,22.43,< 25 normal,non-smoker,7.4000001
+110,female,47,174,62,20.48,< 25 normal,non-smoker,5.5999999
+111,female,61,160,110,42.970001,30+ obese,ex-smoker,4.4000001
+112,male,51,187,104,29.74,25-29 overwgt,curr <=20,4.5
+113,male,30,178,73,23.040001,< 25 normal,non-smoker,4.5
+114,female,29,163,42,15.81,< 25 normal,non-smoker,4.6999998
+115,female,59,155,68,28.299999,25-29 overwgt,ex-smoker,6.5
+117,female,49,166,70,25.4,25-29 overwgt,non-smoker,6
+118,female,60,161,46,17.75,< 25 normal,non-smoker,6.5999999
+119,male,31,175,64,20.9,< 25 normal,non-smoker,4.0999999
+120,male,20,192,102,27.67,25-29 overwgt,ex-smoker,4.0999999
+121,male,54,172,80,27.040001,25-29 overwgt,ex-smoker,5.8000002
+123,female,48,163,58,21.83,< 25 normal,non-smoker,5.5999999
+125,female,50,157,64,25.959999,25-29 overwgt,non-smoker,5.3000002
+126,female,57,152,52,22.51,< 25 normal,ex-smoker,6.3000002
+127,female,56,170,72,24.91,< 25 normal,non-smoker,6.0999999
+128,female,20,165,56,20.57,< 25 normal,non-smoker,4.9000001
+129,female,54,155,75,31.219999,30+ obese,non-smoker,5.4000001
+130,female,19,165,56,20.57,< 25 normal,non-smoker,3.9000001
+131,male,28,183,105,31.35,30+ obese,non-smoker,5.4000001
+132,female,22,159,56,22.15,< 25 normal,non-smoker,4
+133,female,24,165,60,22.040001,< 25 normal,non-smoker,5.3000002
+134,male,22,173,70,23.389999,< 25 normal,curr <=20,6.1999998
+135,female,32,163,55,20.700001,< 25 normal,non-smoker,4.1999998
+136,female,47,167,70,25.1,25-29 overwgt,non-smoker,3.5
+138,male,69,180,91,28.09,25-29 overwgt,non-smoker,5.4000001
+139,female,20,166,72,26.129999,25-29 overwgt,non-smoker,3.8
+141,male,24,187,87,24.879999,< 25 normal,curr <=20,5.5999999
+142,female,55,166,49,17.780001,< 25 normal,non-smoker,3.2
+143,male,52,178,100,31.559999,30+ obese,ex-smoker,6.4000001
+144,male,24,180,78,24.07,< 25 normal,non-smoker,4.5
+145,male,23,170,57,19.719999,< 25 normal,curr >20,3.3
+146,male,67,180,77,23.77,< 25 normal,non-smoker,5
+147,male,30,190,94,26.040001,25-29 overwgt,non-smoker,4.0999999
+148,female,19,174,60,19.82,< 25 normal,curr <=20,5.0999999
+149,female,54,174,99,32.700001,30+ obese,non-smoker,6
+150,male,21,186,87,25.15,25-29 overwgt,curr >20,4.6999998
+151,female,27,162,66,25.15,25-29 overwgt,non-smoker,3.8
+152,female,48,148,65,29.67,25-29 overwgt,ex-smoker,5
+153,male,18,175,102,33.310001,30+ obese,non-smoker,5.6999998
+154,male,66,168,83,29.41,25-29 overwgt,curr <=20,7.4000001
+155,female,30,162,47,17.91,< 25 normal,non-smoker,4.6999998
+156,female,44,161,61,23.530001,< 25 normal,curr <=20,5.9000001
+157,male,27,164,81,30.120001,30+ obese,ex-smoker,6
+158,female,20,163,50,18.82,< 25 normal,non-smoker,3.2
+159,female,27,173,73,24.389999,< 25 normal,non-smoker,4.6999998
+160,female,57,170,85,29.41,25-29 overwgt,non-smoker,6.5999999
+161,male,22,186,71,20.52,< 25 normal,non-smoker,4.3000002
+162,female,47,151,85,37.279999,30+ obese,non-smoker,5.5999999
+163,male,54,168,66,23.379999,< 25 normal,non-smoker,4.3000002
+164,female,54,156,66,27.120001,25-29 overwgt,non-smoker,5.5
+166,female,45,156,59,24.24,< 25 normal,non-smoker,8.1000004
+167,female,22,166,59,21.41,< 25 normal,non-smoker,3.7
+168,male,50,172,87,29.41,25-29 overwgt,non-smoker,6.4000001
+169,male,19,178,65,20.52,< 25 normal,non-smoker,5
+170,female,62,160,61,23.83,< 25 normal,non-smoker,7.1999998
+171,female,20,175,61,19.92,< 25 normal,non-smoker,4.5999999
+172,male,30,178,71,22.41,< 25 normal,non-smoker,4.4000001
+173,male,55,181,86,26.25,25-29 overwgt,ex-smoker,6.6999998
+175,female,55,152,56,24.24,< 25 normal,non-smoker,5
+178,female,61,163,78,29.360001,25-29 overwgt,non-smoker,6.5999999
+179,male,47,159,74,29.27,25-29 overwgt,non-smoker,6.6999998
+180,male,48,178,99,31.25,30+ obese,curr >20,9.6999998
+181,male,51,179,96,29.959999,25-29 overwgt,non-smoker,5
+182,male,27,179,94,29.34,25-29 overwgt,curr >20,5.0999999
+183,female,50,165,76,27.92,25-29 overwgt,non-smoker,6
+184,female,59,171,60,20.52,< 25 normal,non-smoker,6.1999998
+185,male,27,184,78,23.040001,< 25 normal,non-smoker,4.9000001
+188,female,27,170,58,20.07,< 25 normal,ex-smoker,5.5
+189,female,22,168,58,20.549999,< 25 normal,non-smoker,4.3000002
+190,male,57,169,65,22.76,< 25 normal,non-smoker,6
+193,female,45,152,69,29.860001,25-29 overwgt,non-smoker,6
+194,female,45,157,63,25.559999,25-29 overwgt,ex-smoker,6.1999998
+195,female,21,168,71,25.16,25-29 overwgt,curr >20,5
+196,female,53,153,64,27.34,25-29 overwgt,non-smoker,5.5999999
+197,male,26,167,52,18.65,< 25 normal,non-smoker,5.5999999
+199,male,56,175,76,24.82,< 25 normal,ex-smoker,6.8000002
+200,female,21,167,52,18.65,< 25 normal,non-smoker,3.8
+202,male,54,177,79,25.219999,25-29 overwgt,ex-smoker,6.9000001
+203,female,50,170,75,25.950001,25-29 overwgt,non-smoker,4.4000001
+204,male,62,173,72,24.059999,< 25 normal,non-smoker,6.1999998
+205,female,18,167,54,19.360001,< 25 normal,ex-smoker,4.9000001
+207,female,48,159,64,25.32,25-29 overwgt,ex-smoker,6.5
+208,female,44,161,67,25.85,25-29 overwgt,ex-smoker,6.0999999
+209,male,55,178,76,23.99,< 25 normal,non-smoker,4.5999999
+210,female,60,157,66,26.780001,25-29 overwgt,ex-smoker,4.9000001
+211,female,22,163,53,19.950001,< 25 normal,non-smoker,6.3000002
+212,female,22,177,69,22.02,< 25 normal,ex-smoker,4.0999999
+213,male,23,169,63,22.059999,< 25 normal,non-smoker,5.0999999
+214,male,45,172,89,30.08,30+ obese,ex-smoker,6.1999998
+215,male,28,168,64,22.68,< 25 normal,curr <=20,4.5999999
+216,female,26,162,65,24.77,< 25 normal,ex-smoker,3.0999999
+217,male,57,163,70,26.35,25-29 overwgt,ex-smoker,5
+218,male,30,190,95,26.32,25-29 overwgt,ex-smoker,7.5999999
+219,female,19,161,60,23.15,< 25 normal,curr <=20,4.0999999
+220,female,45,159,61,24.129999,< 25 normal,curr <=20,5.3000002
+221,female,26,175,72,23.51,< 25 normal,non-smoker,4.5999999
+222,female,47,165,87,31.959999,30+ obese,ex-smoker,4.6999998
+223,female,41,158,57,22.83,< 25 normal,curr <=20,5.5999999
+224,female,20,162,56,21.34,< 25 normal,curr <=20,5.0999999
+226,male,27,189,76,21.280001,< 25 normal,curr <=20,4.6999998
+227,female,26,167,55,19.719999,< 25 normal,non-smoker,5.4000001
+229,male,28,179,75,23.41,< 25 normal,ex-smoker,4.3000002
+230,female,54,154,63,26.559999,25-29 overwgt,non-smoker,5.3000002
+231,female,22,174,67,22.129999,< 25 normal,non-smoker,5.6999998
+232,female,66,164,51,18.959999,< 25 normal,non-smoker,4.9000001
+233,male,54,170,78,26.99,25-29 overwgt,ex-smoker,5.4000001
+234,male,58,170,80,27.68,25-29 overwgt,ex-smoker,6.5
+235,male,20,173,84,28.07,25-29 overwgt,non-smoker,4.0999999
+236,male,29,173,79,26.4,25-29 overwgt,non-smoker,6.3000002
+237,female,22,165,60,22.040001,< 25 normal,curr <=20,5.5999999
+238,female,47,166,57,20.690001,< 25 normal,non-smoker,5.4000001
+239,male,62,182,70,21.129999,< 25 normal,non-smoker,6.3000002
+240,male,52,171,65,22.23,< 25 normal,non-smoker,5.0999999
+241,female,58,160,69,26.950001,25-29 overwgt,ex-smoker,6.5
+242,female,45,154,62,26.139999,25-29 overwgt,non-smoker,6.1999998
+243,female,67,154,54,22.77,< 25 normal,non-smoker,4.8000002
+244,male,66,174,86,28.41,25-29 overwgt,non-smoker,5.6999998
+245,male,29,177,75,23.940001,< 25 normal,non-smoker,5.6999998
+246,female,24,160,60,23.440001,< 25 normal,non-smoker,4.4000001
+247,female,24,169,65,22.76,< 25 normal,curr >20,5.0999999
+249,female,50,163,66,24.84,< 25 normal,non-smoker,5.1999998
+250,male,57,180,88,27.16,25-29 overwgt,non-smoker,5.5
+251,female,57,161,70,27.01,25-29 overwgt,non-smoker,4.6999998
+252,male,68,167,81,29.040001,25-29 overwgt,ex-smoker,5.8000002
+253,female,52,168,75,26.57,25-29 overwgt,non-smoker,7.8000002
+254,female,29,168,56,19.84,< 25 normal,non-smoker,5.3000002
+255,male,50,182,97,29.280001,25-29 overwgt,ex-smoker,6
+256,male,51,172,73,24.68,< 25 normal,ex-smoker,6.6999998
+257,male,63,171,78,26.67,25-29 overwgt,non-smoker,4.4000001
+258,female,53,174,77,25.43,25-29 overwgt,non-smoker,5.1999998
+259,male,51,167,82,29.4,25-29 overwgt,non-smoker,6.3000002
+260,female,55,158,116,46.470001,30+ obese,non-smoker,6.1999998
+261,female,54,161,80,30.860001,30+ obese,non-smoker,5.3000002
+262,male,51,177,85,27.129999,25-29 overwgt,non-smoker,6.5999999
+263,male,28,180,93,28.700001,25-29 overwgt,non-smoker,5.3000002
+264,female,19,176,64,20.66,< 25 normal,non-smoker,3.7
+265,male,47,167,75,26.889999,25-29 overwgt,non-smoker,7
+266,male,62,161,79,30.48,30+ obese,ex-smoker,5.1999998
+267,male,54,160,88,34.380001,30+ obese,non-smoker,4.9000001
+268,female,51,154,58,24.459999,< 25 normal,non-smoker,6
+270,female,29,165,63,23.139999,< 25 normal,non-smoker,5.5999999
+271,male,25,182,83,25.059999,25-29 overwgt,curr <=20,4.1999998
+272,male,59,171,80,27.360001,25-29 overwgt,curr >20,6.3000002
+273,female,51,177,72,22.98,< 25 normal,curr <=20,4.8000002
+275,male,61,165,79,29.02,25-29 overwgt,ex-smoker,8.6000004
+277,female,20,173,63,21.049999,< 25 normal,non-smoker,4.1999998
+278,male,66,178,77,24.299999,< 25 normal,ex-smoker,7.6999998
+280,female,30,160,52,20.309999,< 25 normal,non-smoker,4.5999999
+281,female,51,156,103,42.32,30+ obese,ex-smoker,8.1999998
+282,female,46,152,58,25.1,25-29 overwgt,non-smoker,5.4000001
+283,female,46,165,79,29.02,25-29 overwgt,non-smoker,6.8000002
+284,male,20,194,85,22.58,< 25 normal,non-smoker,4.1999998
+285,male,50,171,81,27.700001,25-29 overwgt,non-smoker,4.6999998
+286,female,28,158,58,23.23,< 25 normal,non-smoker,4.5999999
+287,female,53,157,69,27.99,25-29 overwgt,non-smoker,5.3000002
+288,female,53,167,72,25.82,25-29 overwgt,non-smoker,6.0999999
