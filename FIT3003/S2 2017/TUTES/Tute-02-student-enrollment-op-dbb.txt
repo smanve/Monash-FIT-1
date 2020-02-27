@@ -1,0 +1,53 @@
+Create table Student2
+(SID       VARCHAR2(10), SLNAME    VARCHAR2(20), SFNAME    VARCHAR2(20), SGENDER   CHAR(1), SDOB      DATE, SCATEGORY NUMBER(5));Insert All
+into Student2 values('10001', 'Tan',    'Mirriam', 'F', to_date('19/JUL/1981','DD/MON/YYYY'), 112)into Student2 values('10002', 'Murray', 'Juan',    'M', to_date('10/JUN/1983','DD/MON/YYYY'), 211)into Student2 values('10003', 'Lay',    'Andy',    'M', to_date('19/JUL/1986','DD/MON/YYYY'), 211)into Student2 values('10004', 'Wright', 'Allan',   'F', to_date('29/JAN/1983','DD/MON/YYYY'), 211)into Student2 values('10005', 'Simon',  'Ally',    'F', to_date('24/AUG/1983','DD/MON/YYYY'), 112)into Student2 values('10006', 'Smith',  'Ben',     'M', to_date('09/JUL/1987','DD/MON/YYYY'), 211)into Student2 values('10007', 'Brown',  'Kate',    'F', to_date('19/OCT/1972','DD/MON/YYYY'), 112)
+Select * from Dual;Create table Offering2
+(OID     NUMBER,
+ OYEAR   NUMBER,
+ OSEM    NUMBER,
+ OCAMPUS VARCHAR2(20),
+ OMODE   VARCHAR2(2),
+ UCODE   VARCHAR2(20));
+Insert ALL
+into Offering2 values(1, 2009, 1, 'Main', 'D',  'IT001')
+into Offering2 values(2, 2009, 2, 'City', 'E',  'IT001')
+into Offering2 values(3, 2009, 2, 'DE',   'E',  'IT004')
+into Offering2 values(4, 2009, 2, 'Main', 'D',  'IT002')
+into Offering2 values(5, 2009, 1, 'City', 'E',  'IT003')
+into Offering2 values(6, 2009, 1, 'Main', 'E',  'IT002')
+into Offering2 values(7, 2010, 1, 'Main', 'D',  'IT001')
+into Offering2 values(8, 2010, 2, 'City', 'E',  'IT001')
+into Offering2 values(9, 2010, 2, 'DE',   'E',  'IT004')
+into Offering2 values(10,2010, 2, 'Main', 'D',  'IT002')
+into Offering2 values(11,2010, 1, 'City', 'E',  'IT003')
+into Offering2 values(12,2010, 1, 'Main', 'E',  'IT002')
+Select * from dual;
+
+Create table Enrollment2
+(
+ OID     NUMBER,
+ SCORE   NUMBER,
+ SID     VARCHAR2(20),
+ Grade  VARCHAR2(2)
+);
+
+Insert all
+Into enrollment2 values (1   , 81, '10001', 'HD')
+Into enrollment2 values (4   , 78, '10001', 'D')
+Into enrollment2 values (2   , 64, '10002', 'C')
+Into enrollment2 values (3   , 53, '10002', 'P')
+Into enrollment2 values (2   , 32, '10003', 'N')
+Into enrollment2 values (1   , 41, '10004', 'N')
+Into enrollment2 values (5   , 63, '10005', 'C')
+Into enrollment2 values (4   , 73, '10006', 'D')
+Into enrollment2 values (1   , 74, '10006', 'D')
+Into enrollment2 values (1   , 85, '10007', 'HD')
+Into enrollment2 values (1   , 87, '10008', 'HD')
+Into enrollment2 values (4   , 64, '10008', 'C')
+Into enrollment2 values (1   , 75, '10009', 'D')
+Into enrollment2 values (3   , 52, '10010', 'P')
+Into enrollment2 values (6   , 65, '10005', 'C')
+Into enrollment2 values (6   , 47, '10010', 'N')
+Select * from dual;
+
+Create Table SUBJECT2 ( UCode   Varchar2(10) NOT NULL, UTitle  Varchar2(20) NOT NULL, UCredit Number(2), PRIMARY KEY (Ucode));Insert Into SUBJECT2 Values ('IT001', 'Database', 5);Insert Into SUBJECT2 Values ('IT002', 'Java', 5);Insert Into SUBJECT2 Values ('IT003', 'SAP', 10);Insert Into SUBJECT2 Values ('IT004', 'Network', 5);Insert Into SUBJECT2 Values ('IT005', 'ASP.NET', 5);
