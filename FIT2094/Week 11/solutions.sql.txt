@@ -1,0 +1,119 @@
+clear screen;
+set linesize 1000;
+set pagesize 100;
+column unitname format a50;
+
+/* Select the highest mark ever in any unit */
+select max(mark) from enrolment;
+
+/* Select the highest mark ever for each unit */
+select unitcode, max(mark) from enrolment group by unitcode;
+
+/* For each student, select the highest mark he/she ever received */
+select studid, max(mark) from enrolment group by studid;
+
+/* For each unit, print unit code, unit name and the highest mark ever in that unit. Print the results in descending order of highest marks */
+select u.unitcode, u.unitname, max(mark) as maximum_marks
+from unit u join enrolment e on u.unitcode = e.unitcode
+group by u.unitcode, u.unitname
+order by max(mark) desc;
+
+
+/* For each student that is enrolled in at least 3 different units, print his/her name and average mark. Also, display the number of units he/she is enrolled in. */
+select s.studid, studfname, studlname, count(distinct unitcode) as num_units, round(avg(mark),2) as average_marks
+from student s join enrolment e on e.studid = s.studid
+group by s.studid, studfname, studlname
+having count(distinct unitcode) >= 3;
+
+
+/* For each unit, count the total number of HDs */
+select unitcode, count(grade) as num_of_hds
+from enrolment
+where grade = 'HD'
+group by unitcode; 
+
+/* For each unit, print the total number of HDs, Ds, and Cs. The output should contain three columns named unitcode, grade_type, num where grade_type is HD, D or C and num is the number of students that obtained the grade/*/
+select unitcode, grade as grade_type, count(*) as num
+from enrolment
+where grade IN ('HD', 'D', 'C')
+group by grade, unitcode
+order by unitcode; 
+
+/* print the student ids of the students who obtained maximum marks in FIT1040 */
+select studid 
+from enrolment
+where mark = (select max(mark) from enrolment
+			where unitcode = 'FIT1040')
+and unitcode = 'FIT1040';
+
+/* For each unit, print the student ids of the students who obtained maximum marks in that unit */
+
+select unitcode, studid, mark
+from enrolment 
+where (unitcode, mark) IN (select unitcode, max(mark)
+							from enrolment group by unitcode);
+
+
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 3 students passed the unit.*/
+
+select unitcode, round(avg(mark),2)
+from enrolment
+where mark >= 50
+group by unitcode
+having count(distinct studid) >= 3; 
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 10 students were enrolled.*/
+
+select unitcode, round(avg(mark),2)
+from enrolment
+where mark >= 50
+and unitcode IN (select unitcode
+				from enrolment
+				group by unitcode
+				having count(distinct studid) > 10 
+				)
+group by unitcode;
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 5 students were enrolled and at least three students passed the unit.*/
+
+select unitcode, round(avg(mark),2)
+from enrolment
+where mark >= 50
+and unitcode IN (select unitcode
+				from enrolment
+				group by unitcode
+				having count(distinct studid) > 5
+				)
+group by unitcode
+having count(distinct studid) >= 3;
+
+
+/* For each staff who is a chief examiner of at least one offering, print the name of staff member and number of offerings he has been chief examiner of. 
+Order the rows in descending order of the number of offerings.*/
+
+select staffid, stafffname, stafflname, count(chiefexam) as num_offering
+from offering o join staff s on s.staffid = o.chiefexam
+group by staffid, stafffname, stafflname
+order by count(chiefexam) desc;
+
+
+/* For each staff regardless of whether they were chief examiner of in any offering or not, print the name of staff member and number of offerings he has been chief examiner of (print zero if none). 
+Order the rows in descending order of the number of offerings.*/
+
+select staffid, stafffname, stafflname, count(chiefexam) as num_offering
+from offering o right outer join staff s on s.staffid = o.chiefexam
+group by staffid, stafffname, stafflname
+order by count(chiefexam) desc;
+
+/* For each staff who is a chief examiner of at least two offerings in 2013, print the name of staff member and number of offerings in 2013 he has been chief examiner of. 
+Order the rows in descending order of the number of offerings.*/
+
+select staffid, stafffname, stafflname, count(chiefexam) as num_offering
+from offering o join staff s on s.staffid = o.chiefexam
+where to_char(ofyear, 'YYYY') = '2013'
+group by staffid, stafffname, stafflname
+having count(chiefexam) >= 2
+order by count(chiefexam) desc;
+
+

@@ -1,0 +1,52 @@
+clear screen;
+set pagesize 100;
+set linesize 500;
+/* print the unitcodes that have lectures scheduled on Mondays */
+
+select distinct unitcode from schedclass where cltype = 'T' and clday = 'Fri';
+
+/*Print names of students and their DOBs where DOB is displayed as something like "01-JAN-1999" */
+
+select studfname||' '||studlname as name, to_char(studdob,'DD-MON-YYYY') as DOB
+from student;
+
+
+/* Print firstname and lastname of the students who got HD in FIT1004*/
+
+select distinct studfname||' '||studlname as name
+from student s join enrolment e on s.studid = e.studid
+where grade = 'HD'
+and unitcode = 'FIT1004';
+
+
+/* Print unitname, and the names of the students who got HD in any unit that contains the word 'Data' in its name */
+
+select distinct unitname, studfname, studlname
+from student s join enrolment e on s.studid = e.studid join unit u on e.unitcode=u.unitcode
+where grade = 'HD'
+and unitname like '%Data%';
+
+
+/* print the names of the unit that have lectures scheduled on Mondays */
+
+select distinct unitname
+from unit u join schedclass s on u.unitcode = s.unitcode
+where cltype = 'L'
+and clday = 'Mon';
+
+
+/* print the names of all students who come to university to attend a lecture on Mondays. 
+We assume an ideal world where a student never misses the scheduled lectures of any unit he/she is enrolled in :P */
+
+select distinct studfname, studlname
+from student s join enrolment e on s.studid = e.studid
+join schedclass c on e.unitcode = c.unitcode and e.semester = c.semester and e.ofyear = c.ofyear
+where cltype = 'L'
+and clday ='Mon';
+
+/*Print ids (and names) of each pair of students who have the same names (both first and last names)  */
+
+select s1.studid as id1, s2.studid as id2, s1.studfname||' '||s1.studlname as name1, s2.studfname||' '||s2.studlname as name2
+from student s1 join student s2 on s1.studfname = s2.studfname and s1.studlname = s2.studlname
+where s1.studid < s2.studid;
+

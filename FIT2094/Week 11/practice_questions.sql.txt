@@ -1,0 +1,48 @@
+clear screen;
+set linesize 1000;
+set pagesize 100;
+column unitname format a50;
+
+/* Select the highest mark ever in any unit */
+
+
+/* Select the highest mark ever for each unit */
+
+
+/* For each student, select the highest mark he/she ever received */
+
+
+/* For each unit, print unit code, unit name and the highest mark ever in that unit. Print the results in descending order of highest marks */
+
+
+/* For each student that is enrolled in at least 3 different units, print his/her name and average mark. Also, display the number of units he/she is enrolled in. */
+
+
+/* For each unit, count the total number of HDs */
+
+/* For each unit, print the total number of HDs, Ds, and Cs. The output should contain three columns named unitcode, grade_type, num where grade_type is HD, D or C and num is the number of students that obtained the grade/*/
+
+/* print the student ids of the students who obtained maximum marks in FIT1040 */
+
+/* For each unit, print the student ids of the students who obtained maximum marks in that unit */
+
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 3 students passed the unit.*/
+
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 10 students were enrolled.*/
+
+
+/* For each unit, print the average marks for the students who passed the unit (e.g., mark >= 50). Only include the units where at least 5 students were enrolled and at least three students passed the unit.*/
+
+/* For each staff who is a chief examiner of at least one offering, print the name of staff member and number of offerings he has been chief examiner of. 
+Order the rows in descending order of the number of offerings.*/
+
+
+/* For each staff regardless of whether they were chief examiner of any offering or not, print the name of staff member and number of offerings he has been chief examiner of (print zero if none). 
+Order the rows in descending order of the number of offerings.*/
+
+
+/* For each staff who is a chief examiner of at least two offerings in 2013, print the name of staff member and number of offerings in 2013 he has been chief examiner of. 
+Order the rows in descending order of the number of offerings.*/
+

@@ -1,0 +1,150 @@
+-- Payroll Schema File
+-- Target: Oracle 
+
+--
+-- Create Table    : 'SALGRADE'
+-- salgrade        : Salary Grade
+-- sallower        : Salary lower limit
+-- salupper        : Salary upper limit
+-- salbonus        : Salary bonus
+--
+CREATE TABLE SALGRADE (
+  salgrade NUMBER(2)   NOT NULL ,
+  sallower NUMBER(6,2)   NOT NULL ,
+  salupper NUMBER(6,2)   NOT NULL ,
+  salbonus NUMBER(6,2)   NOT NULL   ,
+CONSTRAINT salgrade_pk PRIMARY KEY (salgrade),
+CONSTRAINT salgrade_chk1 CHECK (sallower >= 0),
+CONSTRAINT salgrade_chk2 CHECK (sallower <= salupper));
+
+--
+-- Create Table    : 'COURSE'
+-- crscode         : Course Code
+-- crsdesc         : Course Description
+-- crscategory     : Course Category
+-- crsduration     : Course Duration
+--
+CREATE TABLE course (
+  crscode VARCHAR(6)   NOT NULL ,
+  crsdesc VARCHAR(30)   NOT NULL ,
+  crscategory CHAR(3)   NOT NULL ,
+  crsduration NUMBER(2)   NOT NULL   ,
+CONSTRAINT course_pk PRIMARY KEY (crscode),
+CONSTRAINT course_chk1 CHECK (crscode = upper(crscode)),
+CONSTRAINT course_chk2 CHECK (crscategory in ('GEN','BLD','DSG')));
+
+--
+-- Create Table    : 'DEPARTMENT'
+-- deptno          : Department Number
+-- deptname        : Department Name
+-- deptlocation    : Location of department
+-- empno           : Employee who manages department (references EMPLOYEE.empno)
+--                   FK constraint cannot be added until employee table is created
+--
+CREATE TABLE DEPARTMENT (
+  deptno NUMBER(2)   NOT NULL ,
+  deptname VARCHAR(10)   NOT NULL ,
+  deptlocation VARCHAR(8)   NOT NULL ,
+  empno NUMBER(4) ,
+CONSTRAINT department_pk PRIMARY KEY (deptno),
+CONSTRAINT department_un UNIQUE (deptname),
+CONSTRAINT department_chk1 CHECK (deptname = upper(deptname)),
+CONSTRAINT department_chk2 CHECK (deptlocation = upper(deptlocation)));
+
+--
+-- Create Table    : 'EMPLOYEE'
+-- empno           : Employee number
+-- empname         : Employee name
+-- empinit         : Employee initials
+-- empjob          : Employee job
+-- empbdate        : Employee birthdate
+-- empmsal         : Employee monthly salary
+-- empcomm         : Employee commission
+-- deptno          : Department Number (references DEPARTMENT.deptno)
+-- mgrno           : Employees manager (empno of manager) (references EMPLOYEE.empno)
+--
+CREATE TABLE EMPLOYEE (
+  empno NUMBER(4)   NOT NULL ,
+  empname VARCHAR(8)   NOT NULL ,
+  empinit VARCHAR(5)   NOT NULL ,
+  empjob VARCHAR(8)    ,
+  empbdate DATE   NOT NULL ,
+  empmsal NUMBER(6,2)   NOT NULL ,
+  empcomm NUMBER(6,2) ,
+  deptno NUMBER(2) ,
+  mgrno NUMBER(4) ,
+CONSTRAINT employee_pk PRIMARY KEY (empno),
+CONSTRAINT employee_fk1  FOREIGN KEY (mgrno)
+    REFERENCES EMPLOYEE (empno),
+CONSTRAINT employee_fk2 FOREIGN KEY (deptno)
+    REFERENCES DEPARTMENT (deptno));
+
+-- Alter Table    : 'DEPARTMENT'
+-- empno           : Employee who manages department (references EMPLOYEE.empno)
+-- Add constraint for Department table now employee exists:
+ALTER TABLE DEPARTMENT 
+ADD (CONSTRAINT department_fk FOREIGN KEY (empno)
+	      REFERENCES employee (empno));
+
+--
+-- Create Table    : 'HISTORY'
+-- deptno          : Department Number (references DEPARTMENT.deptno)
+-- histbegindate   : Date history record begins
+-- histbeginyear   : Year history record begins
+-- histenddate     : Date history record ends
+-- histmsal        : Monthly Salary for this history record
+-- histcomments    : Comments for this history record
+-- empno           : Employee number (references EMPLOYEE.empno)
+--
+CREATE TABLE HISTORY (
+  empno NUMBER(4)   NOT NULL ,
+  histbegindate DATE   NOT NULL ,
+  histbeginyear NUMBER(4)   NOT NULL ,
+  histenddate DATE    ,
+  histmsal NUMBER(6,2)   NOT NULL ,
+  histcomments VARCHAR(60)    ,
+  deptno NUMBER(2)   NOT NULL   ,
+CONSTRAINT history_pk PRIMARY KEY (empno, histbegindate),
+CONSTRAINT history_chk CHECK (histbegindate < histenddate),
+CONSTRAINT history_fk1 FOREIGN KEY (empno)
+    REFERENCES EMPLOYEE (empno)
+	ON DELETE CASCADE,
+CONSTRAINT history_fk2 FOREIGN KEY (deptno)
+    REFERENCES DEPARTMENT (deptno));
+
+--
+-- Create Table    : 'OFFERING'
+-- offbegindate    : Begin date for offering
+-- crscode         : Course Code (references COURSE.crscode)
+-- offlocation     : Location for offering
+-- empno           : Employee number for employee running offering (references EMPLOYEE.empno)
+--
+CREATE TABLE OFFERING (
+  offbegindate DATE   NOT NULL ,
+  crscode VARCHAR(6)   NOT NULL ,
+  offlocation VARCHAR(8) ,
+  empno NUMBER(4) ,
+CONSTRAINT offering_pk PRIMARY KEY (offbegindate, crscode),
+CONSTRAINT offering_fk1 FOREIGN KEY (crscode)
+    REFERENCES course(crscode),
+CONSTRAINT offering_fk2 FOREIGN KEY (empno)
+    REFERENCES EMPLOYEE (empno));
+
+--
+-- Create Table    : 'REGISTRATION'
+-- offbegindate    : Begin date for offering (references OFFERING.offbegindate)
+-- crscode         : Course Code (references OFFERING.crscode)
+-- regevaluation   : Grade for course completed
+-- empno           : Employee number of employee completing course (references EMPLOYEE.empno)
+--
+CREATE TABLE REGISTRATION (
+  offbegindate DATE   NOT NULL ,
+  crscode VARCHAR(6)   NOT NULL ,
+  empno NUMBER(4) NOT NULL,
+  regevaluation NUMBER(1)      ,
+CONSTRAINT registration_pk PRIMARY KEY (offbegindate, crscode, empno),
+CONSTRAINT resgitration_chk CHECK (regevaluation in (1,2,3,4,5)), 
+CONSTRAINT registration_fk1 FOREIGN KEY (empno)
+    REFERENCES EMPLOYEE (empno),
+CONSTRAINT registration_fk2 FOREIGN KEY (offbegindate, crscode)
+    REFERENCES OFFERING (offbegindate, crscode));

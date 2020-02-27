@@ -1,0 +1,90 @@
+/* 1. Find the total number of prerequisite units for each unit. Include in 
+      the list the unitcode of units that do not have prerequisite.   
+      Hint: use an outer join.*/
+
+select
+  u.unitcode,
+  count(has_prereq_of) as no_of_prereq
+from
+  uni.unit u
+  left outer join
+  uni.prereq p
+  on
+  u.unitcode = p.unitcode
+group by
+  u.unitcode
+order by unitcode;
+
+/* 2. Display unitcode and unitname for units that do not have prerequisite. */
+
+/* Using outer join */
+
+select
+  u.unitcode,
+  u.unitname
+from
+  uni.unit u
+  left outer join
+  uni.prereq p
+  on
+  u.unitcode = p.unitcode
+group by
+  u.unitcode,
+  unitname
+having
+  count(has_prereq_of)=0
+order by unitcode;
+
+/* Using set operator MINUS */
+
+select
+  u.unitcode,
+  unitname
+from
+  uni.unit u
+minus
+select
+  u.unitcode,
+  unitname
+from
+  uni.unit u
+  join
+  uni.prereq p
+  on
+  u.unitcode = p.unitcode
+order by unitcode;
+
+/* Using subquery */
+
+select
+  unitcode,
+  unitname
+from
+  uni.unit
+where
+  unitcode not in
+  (
+    select
+      unitcode
+    from
+      uni.prereq
+  )
+order by unitcode;
+
+/* 3. List the unit code and the average mark for each offering. 
+      Round the average to the nearest 2 decimal. If the average result is 
+      null, display the average as 0. */
+
+select
+  unitcode,
+  to_char(ofyear,'YYYY') as year,
+  semester,
+  to_char(nvl(round(avg(mark),2),0),'990.99') as average
+from
+  uni.enrolment
+group by
+  unitcode,
+  ofyear,
+  semester
+order by
+  average;
