@@ -1,3 +1,5 @@
+A collection of all the course material that I've done and received through my course. Feel free to use them as needed, and if you want to add your own and expand the collection, go ahead.
+
 **Files**
 
 FIT1008 - S1 2017
